@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>清除定时器</button>
+    <script>
+        //setInterval方法:该方法的作用是设置定时器,就是能够在一定时间间隔下重复执行某个操作,属于window对象的方法
+        //格式:window.setInterval(要重复执行的操作,时间间隔)
+        //返回值:返回值是一个数值,这个数值就是该定时器的编号,可以用来删除该定时器
+        var time=setInterval(function(){
+            console.log('hello')
+        },1000)
+
+        //clearInterval方法:清除定时器,即停止setInterval方法的执行
+        //格式:window.clearInterval(定时器编号)
+        var btn=document.getElementsByTagName('button')[0]
+        btn.onclick=function(){
+            clearInterval(time)
+        }
+    </script>
+</body>
+</html>

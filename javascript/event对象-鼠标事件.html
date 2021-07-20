@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div=document.querySelector('div')
+        div.ondblclick=function(e){//鼠标双击事件
+            console.log(e.type)
+        }
+        div.onmouseover=function(e){//移入事件
+            console.log(e.type)//如果有后代元素,那么进入后代元素或者从后代元素再进入到自身会触发多次
+        }
+        div.onmouseout=function(e){//移出事件
+            console.log(e.type)//如果有后代元素,那么进入后代元素或者从后代元素再进入到自身会触发多次
+        }
+        div.onmouseenter=function(e){//移入事件
+            console.log(e.type)//如果有后代元素,不会重复触发
+        }
+        div.onmouseleave=function(e){//移出事件
+            console.log(e.type)//如果有后代元素,不会重复触发
+        }
+        div.onmousedown=function(e){
+            console.log(e.type)//在鼠标压下去,只会触发一次,不会触发多次
+        }
+        div.onmousemove=function(e){
+            console.log(e.type)//鼠标只要移动,就会持续触发
+        }
+    </script>
+</body>
+</html>

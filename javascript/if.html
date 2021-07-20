@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //判断一个年份是否为闰年:能被4整除 且不能被100整除 或能被400整除
+        var year=2021;
+        if(year%4==0 && year%100!=0 || year%400==0){
+            console.log('闰年')
+        }else{
+            console.log('不是闰年')
+        }
+        //判断一个数是否为水仙花数(三位数):xyz  x*x*x+y*y*y+z*z*z=xyz
+        var num=153
+        var g=num%10
+        var s=parseInt(num/10)%10
+        var b=parseInt(num/100)
+        var sum=g*g*g+s*s*s+b*b*b
+        if(sum==num){
+            console.log('是水仙花数')
+        }
+
+        var score=98;
+        if(score>=90&&score<=100){
+            console.log('优秀')
+        }else if(score>=70&&score<90){
+            console.log('良好')
+        }else if(score>=60&&score<70){
+            console.log('及格')
+        }else if(score>=0&&score<60){
+            console.log('不及格')
+        }else{
+            console.log('数据不合理')
+        }
+    </script>
+</body>
+</html>

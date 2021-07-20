@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //bubbles属性:作用就是判断当前事件是否支持事件冒泡,是就返回true,否则就返回false
+        document.addEventListener('click',function(e){
+            console.log(e.bubbles)
+        },true);
+        document.documentElement.addEventListener('click',function(e){
+            console.log(e.bubbles)
+        },true);
+        document.body.addEventListener('click',function(e){
+            console.log(e.bubbles)
+        },true)
+
+    </script>
+</body>
+</html>

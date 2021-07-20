@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          什么是原型:每个函数中都会有一个属性(prototype)属性,这个属性指向了一个对象,这个对象
+          就被称为原型对象,简称原型。原型中存储的是通过构造方法创建出来的所有对象可以共享的内容。
+          可以使用方法名称.prototype属性来获取原型对象
+        */
+
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        console.log(Person.prototype)
+
+        //为原型添加内容
+        Person.prototype.speak=function(){
+            console.log('hello')
+        }
+        Person.prototype.nation='中国'
+        Person.prototype.gender='男'
+
+        //更改原型内容
+        Person.prototype.nation='美国'
+
+        //删除原型内容
+        delete Person.prototype.nation
+
+        //原型内容的获取
+        var p=Person.prototype.gender
+        var p2=new Person('Tom',10)
+        var gen=p2.gender;//可以使用对象直接对原型内容进行获取
+
+        console.log(Person.prototype)
+        console.log(p)
+        console.log(gen)
+
+    </script>
+</body>
+</html>

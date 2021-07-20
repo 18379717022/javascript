@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          构造方法的作用:创建对象
+          构造方法的定义格式:
+            function 构造方法名称(属性名称1,属性名称2,属性名称3){
+                this.属性名称1,
+                this.属性名称2,
+                this.属性名称3,
+                this.方法名称=function(){
+                    //xxx
+                }
+            }
+
+          构造方法的调用:new 构造方法名称(实参1,实参2,实参3)
+        */
+
+        //自定义构造方法,功能是创建student对象
+        function student(name,age,gender){
+            this.name=name;
+            this.age=age;
+            this.gender=gender;
+            this.study=function(){
+                console.log('web前端')
+                console.log(this)//this指向stu
+            }
+        }
+        var stu=new student('小明',19,'男')
+        stu.study()
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          快速排序法:找数组的中间元素作为基准值,将每个元素与基准进行比较,小于基准的元素放在基准左边
+          大于基准的元素放在基准右边
+        */
+       var arr=[33,87,34,56,89,99,22,15,19]
+       
+       //定义一个函数,功能是利用快速排序法对数组进行排序
+       function quicksort(myarr){
+           if(myarr.length<=1){
+               return myarr
+           }
+           var index=Math.floor(myarr.length / 2)//取中间的索引值
+           var midvalue=myarr.splice(index,1)//取中间的数组元素的值
+           //定义两个空数组,用来接收比中间值小的数据和比中间值大的数据
+           var left=[];
+           var right=[];
+           //遍历数组,用数组中剩下的元素与中间值比较,如果比中间值小,则放到left数组中,否则放到right中
+           for(var i=0;i<myarr.length;i++){
+               if(myarr[i]<midvalue){
+                   left.push(myarr[i]);
+               }
+               if(myarr[i]>midvalue){
+                   right.push(myarr[i]);
+               }
+           }
+           
+           return quicksort(left).concat(midvalue,quicksort(right));
+       }
+
+       var res=quicksort(arr)
+       console.log(res)
+    </script>
+</body>
+</html>

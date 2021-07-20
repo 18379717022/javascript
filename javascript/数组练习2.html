@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+           输出:
+                  *****
+                  *****
+                  *****
+        */
+        for(var j=1;j<=3;j++){
+            //打印一行星号
+            for(var i=1;i<=5;i++){
+                document.write('*')
+            }
+            //换行
+            document.write('<br>')
+        }
+        /*
+           输出:
+               *
+               **
+               ***
+               ****
+               *****
+        */
+       for(var i=1;i<=5;i++){
+          for(var j=1;j<=i;j++){
+              document.write('*')
+          }
+          document.write('<br>')
+       }
+       //输出九九乘法表
+       document.write('<table>')
+        for(var i=1;i<=9;i++){
+            document.write('<tr>')
+                for(var j=1;j<=i;j++){
+                    document.write(`<td>${j}*${i}=${i*j}</td>`)
+                }
+            document.write('</tr>')
+        }
+       document.write('</table>')
+       /*
+         输出:
+             *****
+             ****
+             ***
+             **
+             *
+       */
+      for(var i=1;i<=5;i++){
+          for(var j=1;j<=6-i;j++){
+              document.write('*')
+          }
+          document.write('<br>')
+      }
+      //输出等腰三角形
+      for(var i=1;i<=4;i++){
+          //打印占位的空格
+          for(var k=1;k<=4-i;k++){
+              document.write('<span style="visibility:hidden">*</span>')
+          }
+          //打印星号
+          for(var j=1;j<=2*i-1;j++){
+              document.write('*')
+          }
+          document.write('<br>')
+      }
+      for(var i=1;i<=3;i++){
+          //打印占位的空格
+          for(var k=1;k<=i;k++){
+              document.write('<span style="visibility:hidden">*</span>')
+          }
+          //打印星号
+          for(var j=1;j<=7-2*i;j++){
+              document.write('*')
+          }
+          document.write('<br>')
+      }
+    </script>
+</body>
+</html>

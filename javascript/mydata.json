@@ -1,0 +1,16 @@
+{
+    "name":"Tom",
+    "age":18,
+    "gender":"男",
+    "brothers":[
+        {
+            "name":"Jack",
+            "age":13
+        },
+        {
+            "name":"Peter",
+            "age":19
+        }
+    ],
+    "hobby":["爬山","游泳"]
+}

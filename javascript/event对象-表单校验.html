@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkturquoise;
+        }
+        #userInfo,#psdInfo{
+            color:red;
+            font-size: 14px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>表单校验</h1>
+    <form action="ok.html">
+        <table>
+            <tr>
+                <td>用户名:</td>
+                <td><input type="text" name="userName" id="userId"></td>
+                <td id="userInfo"></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" name="psd" id="psd"></td>
+                <td id="psdInfo"></td>
+            </tr>
+            <tr>
+                <td><button >提交</button></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        //获取页面元素
+        var userId=document.querySelector('#userId')
+        var userInfo=document.querySelector('#userInfo')
+        var psd=document.querySelector('#psd')
+        var psdInfo=document.querySelector('#psdInfo')
+        var form=document.querySelector('form')
+
+        //设置用户名和密码框获取焦点时的效果
+        userId.onfocus=function(){
+            userInfo.innerHTML='用户名必须是admin'
+            userId.value=''
+        };
+        psd.onfocus=function(){
+            psdInfo.innerHTML='密码必须是123456'
+            psd.value=''
+        }
+
+        //定义方法,功能是对用户名进行验证
+        function checkUserName(){
+            if(userId.value==''){
+                userInfo.innerHTML='用户名不能为空';
+                return false;
+            }
+            //验证用户名是否合法
+            if(userId.value.toLowerCase()=='admin'){
+                userInfo.innerHTML='合法的用户名';
+                
+                return true;
+            }else{
+                userInfo.innerHTML='不合法的用户名';
+                return false
+            }
+            
+        }
+
+        //定义方法,功能是对密码进行验证
+        function checkPsd(){
+            if(psd.value==''){
+                psdInfo.innerHTML='密码不能为空';
+                return false;
+            }
+            if(psd.value=='123456'){
+                psdInfo.innerHTML='密码正确'
+                
+                return true
+            }
+            
+        }
+
+        //设置用户名或密码框失去焦点的效果
+        userId.onblur=checkUserName
+        psd.onblur=checkPsd
+
+        //点击提交按钮时验证用户名和密码是否正确
+        form.onsubmit=checkAll;
+
+        //定义方法,功能是设置点击提交按钮时对用户名和密码框做同一验证的效果
+        function checkAll(){
+            //验证用户名
+            var res1=checkUserName();
+            //验证密码
+            var res2=checkPsd()
+            if(res1==true&&res2==true){
+                return true
+            }else{
+                return false
+            }
+        }
+
+    </script>
+</body>
+</html>

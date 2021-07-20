@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Math对象(内置对象):用于数学运算的对象,包含大量的属性和方法
+        /*
+          Math对象的属性:
+            1.PI属性:获取圆周率
+            2.ceil方法:对数据进行向上取整,3.14=>4
+            3.floor方法:对数据进行向下取整,3.14=>3
+        */
+
+        console.log(parseInt(Math.PI))
+        var r=3.14
+        var res=Math.ceil(r)
+        console.log(res)
+        var num=4.589
+        var res2=num.toFixed(2)//保留两位小数,四舍五入并且转换成字符串
+        console.log(typeof (res2*1))//number
+        var num2='a'
+        console.log(typeof (num2*1))//number
+    </script>
+</body>
+</html>

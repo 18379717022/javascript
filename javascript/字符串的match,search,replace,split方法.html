@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //search方法:在字符串中查找是否包含指定的字符,有则返回下标,否则返回-1,类似于indexOf
+        var str='hello'
+        var res=str.search('l')
+        console.log(res)
+
+        //replace方法:将字符串中的指定字符替换为新的字符,格式：字符串.replace('旧的字符','新的字符')
+        var str='good'
+        var res=str.replace('o','t')//将第一个'o'替换为't'
+        console.log(res)
+
+        //split方法:将字符串转换为数组,格式:字符串.split('分隔符')
+        //分隔符说明:如果不写参数,那么会将整条字符串作为一个数组元素进行转换
+        //如果写参数,那么参数两侧的字符会被转换为数组元素
+        var str='hello'
+        var res=str.split()
+        console.log(res)
+        var res=str.split('e')
+        console.log(res)//Array [ "h", "llo" ]
+        var res=str.split('')
+        console.log(res)//Array(5) [ "h", "e", "l", "l", "o" ]
+
+        //match()方法:可以在字符串内检索指定的值,或找到一个或多个正则表达式的匹配
+        //语法:string.match(regexp)
+
+        //全局查找字符串"ain" ,且不区分大小写
+        var str="The rain in SPAIN stays mainly in the plain"
+        var res=str.match(/ain/gi)
+        console.log(res)//Array(4) [ "ain", "AIN", "ain", "ain" ]
+    </script>
+</body>
+</html>

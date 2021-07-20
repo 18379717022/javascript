@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数组的遍历:1.for循环  2.for in循环(主要用来遍历数组的下标或对象的属性)  3.for of(遍历数组的值,没有下标)
+        //4.forEach方法:该方法是数组对象的一个方法,可以用来遍历数组的下标和值
+        var arr=[1,2,3,4,5]
+        var arr2=[6,7,8,9,10]
+        //1.for循环
+        for(var i=0;i<arr.length;i++){
+            console.log(arr[i])
+        }
+
+        //2.for in循环
+        for(var i in arr2){
+            console.log(arr2[i])
+        }
+
+        //3.for of循环
+        for(var ele of arr2){
+            console.log(ele)
+        }
+
+        //4.forEach方法
+        arr.forEach((item,index)=>{
+            console.log(item+'.....'+index)
+        })
+
+    </script>
+</body>
+</html>

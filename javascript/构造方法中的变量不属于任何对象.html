@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age){
+            var salary=1000;
+
+            this.name=name;//构造方法中的属性叫私有属性,原型链上的属性叫公有属性
+            this.age=age;
+            this.getSalary=function(){
+                console.log(salary)
+            }
+        }
+        var p=new Person('Tom',10);
+        console.log(p.name)
+        console.log(p.age)
+        p.getSalary()
+    </script>
+</body>
+</html>

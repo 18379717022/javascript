@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            background-color: orange;
+            position: fixed;
+            right: 0;
+            bottom: -200px;
+        }
+        span{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #ccc;
+            font-size: 18px;
+            border-radius: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>x</span>
+    </div>
+    <script>
+        var div=document.querySelector('div')
+        var span=document.querySelector('span')
+        var time;
+
+        //定义函数,功能是使div向上移动
+        function move(){
+            //获取当前的bottom属性
+            var styBottom=parseInt(getStyle(div).bottom)
+            div.style.bottom=styBottom+1+'px'
+            if(styBottom>=0){
+                clearInterval(time)
+            }
+        }
+        //定义函数,功能是获取内部样式表
+        function getStyle(ele){
+            if(window.getComputedStyle==undefined){
+                //IE浏览器
+                return ele.currentStyle;
+            }else{
+                return window.getComputedStyle(ele,null)
+            }
+        }
+        //启动定时器,调用move方法
+        time=setInterval(move,30)
+
+        span.onclick=function(){
+            if(parseInt(getStyle(div).bottom)>=0){
+                div.style.display='none'
+            }
+        }
+    </script>
+</body>
+</html>

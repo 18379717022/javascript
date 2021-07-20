@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          贪婪模式:如果正则表达式中有表示数量的特殊符合,如*,+,{n,m}等,在匹配时会尽可能多的匹配字符,默认的模式
+          懒惰模式:如果正则表达式中有表示数量的特殊符合,如*,+,{n,m}等,在匹配时会尽可能少的匹配字符
+          注意:如果要将贪婪模式变成懒惰模式,只需要在数量符合后面加一个?
+        */
+
+        var str='antzone';
+        var reg=/a.*/;//从字符串中找a和它后面的字符(0-无穷),贪婪模式
+        var reg2=/a.*?/;//懒惰模式
+
+        var res=str.match(reg);
+        var res2=str.match(reg2)
+        console.log(res)
+        console.log(res2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //以下两个定时器中的代码同时执行,这就是异步,异步就是同时加载
+        /*
+          async属性:DOM加载和js脚本加载异步执行,同时进行
+          async优势:避免了因DOM文件过大导致的文件加载阻塞
+          async缺陷:无法确定js脚本到底何时执行,并仅对外部js脚本生效
+        */
+        setInterval(function(){
+            console.log('hello')
+        },1000)
+        setInterval(function(){
+            console.log('world')
+        },1000)
+    </script>
+</body>
+</html>

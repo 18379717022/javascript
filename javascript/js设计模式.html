@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          工厂模式:利用该模式可以批量的创建JS对象。它的本质就是JS中的函数,利用这个函数去创建对象
+          格式：
+          function 函数名称(形参1,形参2..){
+              var 对象名称={};
+              对象名称.属性名称1=形参1;
+              对象名称.属性名称2=形参2;
+              对象名称.方法名称=function(){}
+              ....
+
+              return 对象名称;
+          }
+          特点:功能提高代码复用性,但是不能区分对象类型
+        */
+
+        function createStudent(name,age,gender){
+            var stu={};
+            stu.name=name;
+            stu.age=age;
+            stu.gender=gender;
+            stu.speak=function(){
+                console.log('hello')
+            };
+
+            return stu;
+        }
+
+        var s1=createStudent('tom',10,'男')
+        console.log(s1)
+
+        /*
+            DOM2是基于事件池机制完成,每绑定一个方法,都会往事件池中存放一个方法,当事件触发会依次执行
+            事件池中的事情。可以给同一个元素的某个事件绑定多个不同的方法。
+            发布订阅模式:发布订阅其实就是模拟事件池机制,是一种一对多的关系
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          回流:重新排列页面中元素的位置,元素的布局(大小,位置,显隐)发生改变就会引起回流,
+          每个页面刚开始加载就会有一次回流
+          重绘:当render tree中的一些元素需要更新属性,而这些属性只是影响元素的外观,风格,而不会影响
+          布局的,比如background-color。这就是重绘
+          回流与重绘的关系:回流必将引起重绘,重绘不一定引起回流
+          要尽可能减少重排与重绘引起的性能的消耗:
+              1.不要一项一项的去改变样式,尽可能一口气写完。最好使用.style.cssText
+              2.读写DOM也尽量放在一起
+              3.使用文档碎片 var linshi=document.createDocumentFragment();
+              4.使用fixed或者absolute可以减少回流与重绘
+        */
+    </script>
+</body>
+</html>

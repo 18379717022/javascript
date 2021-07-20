@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //求1-10这10个数的最大值和最小值
+        var arr=[1,2,3,4,5,6,7,8,9,10]
+        //假设最大值
+        var max=arr[0]
+        //遍历数组,用数组的每一个元素与max作比较,如果比max大,就用该元素替换掉max
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]>=max){
+                max=arr[i]
+            }
+        }
+        console.log(`数组的最大值为${max}`)
+        //假设最小值
+        var min=arr[0]
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]<=min){
+                min=arr[i]
+            }
+        }
+        console.log(`数组的最小值为${min}`)
+
+        //求1-10这10个数中奇数和偶数的个数
+        var arr=[1,2,3,4,5,6,7,8,9,10]
+        var countj=0;
+        var counto=0;
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                counto++
+            }else{
+                countj++
+            }
+        }
+        console.log(`奇数有${countj}个,偶数有${counto}个`)
+        //求1-10这10个数中下标为偶数的元素的和
+        var arr=[1,2,3,4,5,6,7,8,9,10]
+        var sum=0
+        for(var i in arr){
+            if(i%2==0){
+                sum=sum+arr[i]
+            }
+        }
+        console.log(`1-10这10个数中下标为偶数的元素的和为${sum}`)
+    </script>
+</body>
+</html>

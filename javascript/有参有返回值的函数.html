@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //有参有返回值的函数:function 函数名称(形参1,形参2){ 函数体 ;return 返回值}
+        //调用:var 变量= 函数名称(实参1,实参2)
+        //返回值返回在调用函数的位置,即哪里调用了该函数,返回值就返回到哪里
+        function add(a,b){
+            var num=a+b;
+            return num
+        }
+        var sum=add(2,8)
+        if(sum%2==0){
+            console.log('偶数')
+        }else{
+            console.log('奇数')
+        }
+        console.log(add(2,9))
+    </script>
+</body>
+</html>

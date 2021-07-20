@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          search方法
+          1.作用：在字符串中查找某个子串,类似于indexOf
+          2.格式:字符串对象.search('子串')
+          3.与indexOf的区别是,search可以结合正则使用,而indexOf不行
+          4.注意：search方法当找到第一个匹配的子串后就停止匹配
+        */
+
+        var str='helloworld'
+        var reg=/o/g;
+        var res=str.search(reg)
+        console.log(res)//4
+    </script>
+</body>
+</html>

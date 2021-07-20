@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数据类型转换:隐式转换  显示转换(强制转换)
+        //1.隐式转换：就是指数据在运算过程中自动发生的类型转换
+        var a=1;
+        var name='200'
+        var add=a+name;
+        console.log(add)//在加法运算时数值自动转换为字符串 即字符串拼接
+        console.log(a+true)//布尔值自动转换为数值  true---1   false---0
+        //2.强制类型的转换:
+        //其他类型的数据----数值型：Number,parseInt,parseFloat
+        //Number转换:忽略字符串前后空格  保留正负号   12a45转换不了结果为NaN   true和false转换为1/0
+        //parseInt转换:忽略字符串前后空格  保留正负号  123a456转换为123  a12345转换为NaN  对数值取整(不进位)
+        //parseInt小数点不能转 parseFloat可以转小数点
+        var str=12+''
+        console.log(typeof str)//string
+
+        var str2='123'
+        console.log(typeof Number(str2))//number
+
+        //其他类型数据转换为布尔值:需要使用Boolean方法
+        //1.数值中的0或NaN---false  2.字符串中的空字符串---false  3.undefined---false  4.null---false
+    </script>
+</body>
+</html>

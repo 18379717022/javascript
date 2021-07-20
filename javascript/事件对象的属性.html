@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <a href="http://www.baidu.com">百度一下</a>
+    <script>
+        //事件对象的属性:clientX,clientY,offsetX,offsetY,screenX,screenY
+        var div=document.getElementById('box')
+        div.onclick=function(e){
+            e=e||window.event
+            console.log(e.clientX,e.clientY)//点击处距离视口的距离
+            console.log(e.screenX,e.screenY)//点击处距离屏幕的距离
+            console.log(e.offsetX,e.offsetY)//距离自身元素的距离
+            console.log('阻断冒泡')
+            e.stopPropagation()//阻断冒泡
+            e.cancelBubble=true;//IE浏览器下面阻断冒泡
+        }
+        document.onclick=function(e){
+            e=e||window.event;
+            console.log('document')
+        }
+
+        //事件对象的方法:preventDefault(取消默认行为)
+        var a=document.getElementsByTagName('a')[0]
+        a.onclick=function(e){
+            e=e||window.event
+            
+            //兼容写法
+            if(e.preventDefault==undefined){
+                //IE浏览器
+                e.returnValue=false
+            }else{
+                //谷歌浏览器
+                e.preventDefault()
+            }
+        }
+
+        //事件对象的方法:stopPropagation方法:阻断冒泡
+        
+
+    </script>
+</body>
+</html>

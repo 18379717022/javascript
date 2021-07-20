@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        /* 
+          事件对象的三个重要属性:touches,targetTouches,changedTouches
+          touches:该属性中主要保存了放到屏幕上的所有触摸点的相关信息
+          targetTouches:该属性中主要保存了和当前元素相关的触摸点信息
+          changedTouches:该属性中主要保存了由触摸点变化形成的信息
+        */
+        var div=document.querySelector('div')
+        div.ontouchstart=function(e){
+            console.log(e)
+        }
+    </script>
+</body>
+</html>

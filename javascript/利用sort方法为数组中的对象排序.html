@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[
+            {
+                name:'tom',
+                age:10,
+                salary:3000
+            },
+            {
+                name:'jack',
+                age:18,
+                salary:2000
+            },
+            {
+                name:'lucy',
+                age:20,
+                salary:2000
+            },
+            {
+                name:'bob',
+                age:39,
+                salary:10000
+            }
+        ]
+        //按照薪资从小到大排序,如果薪资相等那就按照年龄升序排序
+        arr.sort((a,b)=>{
+            //判断薪资是否相等,如果相等,则按照年龄升序排序
+            if(a.salary==b.salary){
+                return a.age-b.age
+            }else{
+                return a.salary-b.salary
+            }
+        })
+        console.log(typeof arr)
+    </script>
+</body>
+</html>

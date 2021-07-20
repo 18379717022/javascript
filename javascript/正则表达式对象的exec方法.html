@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          exec方法
+          1.作用:该方法是正则表达式对象的方法,可以利用这个方法在字符串中检索是否有和该正则表达式
+          匹配的子串,如果有就返回,有点类似于match方法
+          2.格式:正则表达式.exec(字符串)
+        */
+
+        var str='abcabcabc'
+        var reg=/a/g;
+        var res=reg.exec(str)
+        console.log(res)
+    </script>
+</body>
+</html>

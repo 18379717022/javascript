@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //splice方法:可以对数组做增 删 改操作
+        //增的格式:arr.splice(下标,0,要增加的数据)
+        var arr=[1,2,3,4,5]
+        arr.splice(2,0,6)
+        console.log(arr)
+
+        //删的格式:arr.splice(下标,个数),返回值为被删元素形成的新数组
+        var arr=[1,2,3,4,5]
+        arr.splice(1,3)
+        console.log(arr)
+
+        //改的格式:arr.splice(下标,个数,新的值),返回值为被改元素形成的新数组
+        var arr=[1,2,3,4,5]
+        arr.splice(1,1,1)
+        console.log(arr)
+    </script>
+</body>
+</html>

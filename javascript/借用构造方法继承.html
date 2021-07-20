@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          什么是继承：所谓继承就是在两个构造方法间建立起来的某种关系,通过这种关系,通过这种关系
+          可以让下级构造方法创建出来的对象享用上级构造方法获取原型中的内容,继承的方式主要有：
+          借用构造方法继承,原型链继承,组合继承
+
+          构造方法继承：
+          格式：function 构造方法1(){}
+               function 构造方法2(){
+                   构造方法1.call(this,实参1,实参2...)
+                   构造方法1.apply(this,[实参1,实参2...])
+               }
+
+          注意:借用构造方法继承,继承的是上级构造方法对私有属性的绑定和初始化功能,不能继承上级构造方法
+          原型中的内容
+        */
+        function Person(name,age,gender){
+            this.name=name;
+            this.age=age;
+            this.gender=gender;
+        }
+
+        function Student(name,age,gender,school,teacher){
+            //通过借用构造方法的形式来继承上级构造方法对name,age,gender属性的绑定和初始化操作
+            Person.call(this,name,age,gender)
+            this.school=school;
+            this.teacher=teacher
+        }
+
+        var s=new Student('tom',10,'男','北京大学','李教授')
+        console.log(s)
+    </script>
+</body>
+</html>

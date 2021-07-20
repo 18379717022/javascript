@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          instanceof操作符
+            1.作用:判断某个引用类型的数据的具体类型
+            2.格式：数据 instanceof 类型
+            3.结果：如果属于该类型,则返回true,否则为false
+        */
+
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        var p=new Person('Tom',10)
+        //判断p对象是否属于Person类型
+        var res=p instanceof Person
+        console.log(res)//true
+    </script>
+</body>
+</html>

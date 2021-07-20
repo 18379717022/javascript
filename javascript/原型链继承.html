@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          原型链继承:所谓原型链继承,就是让下级构造方法的prototype属性指向上级构造方法创建出来的
+          一个实例(对象)
+          格式：function 构造方法1(){}
+                function 构造方法2(){}
+                构造方法2.prototype=new 构造方法1()
+
+          什么是原型链:所谓原型链,就是指通过原型链继承,在原型与原型之间建立起来的一条链式结构
+          我们把这条链式结构称为原型链。当对象在操作属性时,先从自身的私有属性中查找,如果有,则
+          返回对应的值,如果没有,则沿着自身的__proto__属性到它的原型中查找,如果原型中也没有,那么
+          就会沿着原型链继续向上查找,如果找到则返回其值,如果找到Object原型也没有找到,则返回undefined
+          
+          原型链的作用就是确定属性的查找顺序
+        */
+    </script>
+</body>
+</html>

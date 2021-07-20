@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style:none;
+            background-color: #ccc;
+            width: 120px;
+            position: fixed;
+            left: 100px;
+            top: 100px;
+            display: none;
+        }
+        li{
+            background-color: #eee;
+            padding-left: 10px;
+            line-height: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>复制</li>
+        <li>剪切</li>
+        <li>粘贴</li>
+    </ul>
+    <script>
+        var ul=document.querySelector('ul')
+        //为document添加鼠标右击事件
+        document.oncontextmenu=function(e){
+            e=e||window.event
+            //取消默认行为
+            e.preventDefault==undefined?e.returnValue=false:e.preventDefault()
+            //显示菜单
+            ul.style.display='block';
+            ul.style.left=e.clientX+'px';
+            ul.style.top=e.clientY+'px'
+        }
+        //点击鼠标左键,隐藏菜单
+        document.onclick=function(){
+            ul.style.display='none'
+        }
+        //设置鼠标移过li时li变色的效果
+        var lis=document.querySelectorAll('li')
+        for(var i=0;i<lis.length;i++){
+            lis[i].onmouseover=function(){
+                this.style.backgroundColor='#ccc'
+            };
+            lis[i].onmouseout=function(){
+                this.style.backgroundColor="#eee"
+            }
+        }
+    </script>
+</body>
+</html>

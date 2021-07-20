@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //join方法:将数组转换成字符串
+        var arr=[1,2,3,4,5]
+        var res=arr.join()//以逗号拼接
+        console.log(res)
+        var res2=arr.join(' ')//以空格拼接
+        console.log(res2)
+        var res3=arr.join('*')//以*拼接
+        console.log(res3)
+
+        //indexOf方法:在数组中查找指定的值,如果有则返回其下标,没有就返回-1(从前向后查找)
+        var arr=[1,2,3,4,5]
+        var res=arr.indexOf(3,3)
+        console.log(res)
+
+        //lastindexOf方法:从后向前查找数组中指定的值,有则返回其下标,没有就返回-1
+        var arr=[1,2,3,4,3,5]
+        var res=arr.lastIndexOf(3,3)
+        console.log(res)
+    </script>
+</body>
+</html>

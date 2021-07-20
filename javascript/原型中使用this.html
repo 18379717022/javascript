@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          this在原型中使用:
+          原型中的this代表调用原型内容的对象
+        */
+
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+
+        Person.prototype.speak=function(){
+            console.log(this.name)//这里的this代表的是调用该方法的对象
+        }
+
+        var p1=new Person('Tom',10)
+        var p2=new Person('Jack',20)
+        p1.speak();
+        p2.speak()
+    </script>
+</body>
+</html>

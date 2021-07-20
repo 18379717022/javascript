@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          call和apply:作用都是用来扩展函数的作用域范围
+          1.call的格式:函数.call(借用者,参数1,参数2....)
+          2.apply的格式:函数.apply(借用者,[参数1,参数2....])
+          3.说明:call和apply是函数对象的方法,任何函数都可以调用这两个方法,不需要手动调用,
+          在借过来的那一刻已经执行了
+        */
+
+        var obj1={
+            name:'Tom',
+            age:10,
+            speak:function(h){
+                console.log(h)
+            }
+        }
+
+        var obj2={
+            name:'jack',
+            age:39
+        }
+        obj1.speak.call(obj2,'hello')//将obj1中的speak方法借给obj2来用
+    </script>
+</body>
+</html>

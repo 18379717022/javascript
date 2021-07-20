@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //indexOf方法：在字符串中查找指定字符,如果找到,则返回其下标,否则返回-1
+        //注意:如果字符串中包含多个符合条件的字符,那么查找到第一个后停止查找
+        var str='helloworld'
+        var res=str.indexOf('l')
+        console.log(res)
+        var res=str.indexOf('l',5)//从下标为5的字符开始查找'l'
+        console.log(res)
+        var res=str.indexOf('ow')//返回'o'的下标
+
+        //lastIndexOf方法:在字符串中查找指定的字符,从后向前查找
+        var str='helloworld';
+        var res=str.lastIndexOf('l')
+        console.log(res)//8
+        var res=str.lastIndexOf('l',5)
+        console.log(res)//3
+    </script>
+</body>
+</html>

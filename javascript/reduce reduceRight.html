@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //reduce方法：reduce()方法接收一个函数作为累加器,数组中的每个值(从左到右)开始缩减,最终计算为一个值
+        //格式：数组.reduce(function(prev,currentValue,currentIndex,arr){},初始值)
+        //注意1:如果没有设置初始值,那么prev就是数组的第一个元素
+        //currentValue是数组第二个元素,currentIndex就是数组第二个元素的下标
+        //注意2:如果有设置初始值,那么prev就是该初始值
+        //currentValue是数组第一个元素,currentIndex就是数组第一个元素的下标
+
+        var arr=[10,20,30,40,50,60,70,80,90,100]
+        var res=arr.reduce((prev,currentValue,currentIndex,arr)=>{
+            return prev+currentValue
+        })
+        console.log(res)
+    </script>
+</body>
+</html>

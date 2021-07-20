@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          什么是正则表达式:也被称为规则表达式,它是由一些普通字符和特殊字符构成的表达式。
+          它的作用是用来验证字符串是否符合格式要求,或者判断字符串是是否包含指定格式的子串
+          1.字面量形式创建正则表达式:var 正则表达式名称=/表达式内容/修饰符(可以省略)
+          2.test方法:该方法的作用是用来判断字符串是否符合正则表达式的格式要求,如果符合就
+          返回true,否则返回false,格式:正则表达式.test(字符串)
+          3.利用构造方法创建正则表达式:var 正则表达式名称=new RegExp('表达式内容','修饰符')
+        */
+
+        var reg=/a/i;//该正则表达式的作用就是判断字符串中是否包含字符a/A,i表示不区分大小写
+        var res=reg.test('Apple')
+        console.log(res)
+
+        var reg2=new RegExp('a','i')
+        var str='Abc'
+        var res2=reg2.test(str)
+        console.log(res2)
+
+    </script>
+</body>
+</html>

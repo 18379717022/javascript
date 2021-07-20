@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--innerHTML属性属于DOM操作,用于设置和获取页面中元素的内容-->
+    <ul>
+        <li>1</li>
+        <li id="box2">2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        //获取id为box2的li
+        var li=document.getElementById('box2')
+        console.log(li.innerHTML)
+        li.innerHTML='helloword2'
+        console.log(li.innerHTML)
+
+        if(3>2){
+            var num=2
+        }
+        console.log(num)
+        if(4>3){
+            let num2=3
+            console.log(num2)
+        }
+        
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ]
+        //1.将这个二维数组打印到页面中,打印成如下形式
+        /*
+           1 2 3
+           4 5 6
+           7 8 9
+        */
+       for(var i=0;i<arr.length;i++){
+           for(var j=0;j<arr[i].length;j++){
+               document.write(arr[i][j]+'&nbsp;&nbsp;&nbsp;&nbsp')
+           }
+           document.write('<br>')
+       }
+
+       //2.求这个二维数组对角线上的数据的和
+       var sum=0
+       for(var i=0;i<arr.length;i++){
+           for(var j=0;j<arr[i].length;j++){
+               if(i==j||i+j==2){
+                   sum=sum+arr[i][j]
+               }
+           }
+       }
+       document.write(sum)
+    </script>
+</body>
+</html>

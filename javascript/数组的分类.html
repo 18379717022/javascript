@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          数组的分类:
+            1.从下标的个数分:一维数组,二维数组,多维数组
+              1）一维数组:下标为一个的数组,如arr[下标]
+              2）二维数组：下标为两个的数组,如arr[下标][下标]
+            2.从下标类型分:索引型数组,关联数组
+              1)索引型数组：数组元素的下标为数值型,如arr[0]
+              2)关联式数组：数组元素的下标为字符,如arr['name']
+        */
+
+       /*
+         二维数组的定义
+         var 数组名称=[
+             [值1,值2],
+             [值4,值5,值6],
+             [值7,值8,值9,值10]
+            ]
+       */
+       var arr=[
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ]
+        //查
+        console.log(arr[2][2])
+        //改
+        arr[1][1]=10
+        console.log(arr)
+        //删
+        delete arr[1][0]
+        console.log(arr)
+        //增
+        arr[2][3]=10
+        console.log(arr)
+        
+        var arr2=new Array(3)
+        console.log(arr2)
+        var arr2=new Array(1,2,4)
+        console.log(arr2)
+        var arr2=new Array('a')
+        console.log(arr2)
+        var arr2=[3]
+        console.log(arr2)
+    </script>
+</body>
+</html>

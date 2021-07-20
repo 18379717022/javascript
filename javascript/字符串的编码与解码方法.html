@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //btoa方法:按照Base64的编码方式对字符串进行编码
+        //格式:btoa(字符串)
+        var str='helloworld'
+        var res=btoa(str)
+        console.log(res)//aGVsbG93b3JsZA==
+
+        //atob方法:将按照Base64编码方式得到的字符串解码回原有的字符串
+        //格式:atob(字符串)
+        var res2=atob(res)
+        console.log(res2)//helloworld
+
+        //利用encodeURIComponent方法对字符串进行编码
+        var str='?name=张三&age=10&gender=男'
+        var res=encodeURIComponent(str)
+        console.log(res)//%3Fname%3D%E5%BC%A0%E4%B8%89%26age%3D10%26gender%3D%E7%94%B7
+
+        //利用decodeURIComponent方法对字符串进行解码
+        var res2=decodeURIComponent(res)
+        console.log(res2)
+    </script>
+</body>
+</html>

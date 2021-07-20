@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          1.arguments对象:函数内部的对象,即该对象只能在函数里面使用,不可以在外部使用
+          它的作用是用来管理函数被调用时传递过来的实参(数据),它不是一个数组,是一个伪数组,
+          在管理实参时也是用下标的方式对实参进行了编号,即可以使用arguments[下标]的形式来
+          操作实参。
+          2.形参和arguments的关系是:形参和arguments都可以管理实参,而且它们管理的是同一份数据
+          在实际操作实参时,为了方便通常用形参,如果实参的个数是确定的,那么我们就定义形参,
+          如果实参的个数是不确定的,那么我们就不定义形参,用arguments对象操作。
+          3.arguments对象包含两个属性:length,callee
+            1.length属性:获取实参个数
+            2.callee属性:该属性的作用是用来获取arguments对象所在的函数,即callee属性指向了
+            arguments所在的函数,常与递归函数结合使用,或与匿名自执行函数结合使用
+        */
+
+        function fn(a,b){
+            console.log(arguments)
+            var res=Array.isArray(arguments)
+            console.log(res)
+            a=1000;
+            console.log(arguments[0])
+        }
+        fn(1,3)
+
+        //定义一个函数,功能是求数据的和
+        function add(){
+            var sum=0;
+            for(var i=0;i<arguments.length;i++){
+                sum=sum+arguments[i]
+            }
+            console.log(sum)
+        }
+        add(2,1,3,8)
+
+        /*
+          重载函数:所谓重载函数就是指,两个函数的名称相同,但是它们的形参的个数不同,或形参的类型不同
+          注意:javascript中没有重载函数,其他语言如java中具有重载函数
+          在javascript中如果函数名称相同那么后面的函数会覆盖前面的函数
+        */
+       function again(a){
+           console.log('只有一个形参'+a)
+       }
+       function again(a,b){
+           console.log('有两个形参'+a+'....'+b)
+       }
+       again(1,2)
+    </script>
+</body>
+</html>

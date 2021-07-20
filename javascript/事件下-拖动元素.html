@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: fixed;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div=document.querySelector('div')
+        div.onmousedown=function(e){
+            e=e||window.event
+            var div_left=e.clientX
+            var div_top=e.clientY
+            console.log(div_left)
+            console.log(div_top)
+            document.onmousemove=function(e){
+                e=e||window.event
+                var bodyx=e.clientX
+                var bodyy=e.clientY
+                var leftx=(bodyx-div_left)+'px'
+                var topy=(bodyy-div_top)+'px'
+                div.style.left=leftx
+                div.style.top=topy
+            }
+        }
+        div.onmouseup=function(){
+            document.onmousemove=null
+        }
+    </script>
+</body>
+</html>

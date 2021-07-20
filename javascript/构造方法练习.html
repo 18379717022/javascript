@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //定义构造方法,功能是创建矩形对象
+        function Rect(width,height){
+            this.width=width;//属性名称前面的this表示调用该构造方法时创建的对象
+            this.height=height;
+            this.l=function(){
+                return this.width*2+this.height*2;//此处的this表示调用这个方法的那个对象
+            }
+        }
+        var res1=new Rect(100,50)
+        var res2=new Rect(200,100)
+        console.log(res1.l())
+        console.log(res2.l())
+    </script>
+</body>
+</html>

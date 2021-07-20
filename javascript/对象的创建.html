@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //类：就是具有相同属性和方法的集合,人类,动物类,家电类等,类里面存储的就是具体的对象
+        //对象:就是类中的一个具体实物,人类-具体某个人(张三丰)
+        //对象是具有一定功能的属性和方法的集合
+        //内置对象(本地对象):Math对象,Number对象,Date对象等,系统给我们提供好了,拿过来用就行
+        //宿主对象:dom(文档对象模型),bom(浏览器对象)
+        //自定义对象:我们自己定义和开发的对象
+
+
+        /*
+           字面量形式创建对象,格式
+             var 对象名称={
+                 属性名：属性值,
+                 属性名:function(){}
+             }
+        */
+       var p1={
+           name:'小明',
+           age:10,
+           gender:'男',
+           eat:function(){
+               console.log('吃饭')
+           },
+           study:function(){
+               console.log('学习前端')
+           }
+       }
+       console.log(p1)
+    </script>
+</body>
+</html>

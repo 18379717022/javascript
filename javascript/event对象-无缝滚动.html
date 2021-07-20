@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #box{
+            width: 500px;
+            border: 1px solid black;
+            margin: 100px auto;
+            padding: 0 10px;
+            height: 300px;
+            line-height: 2em;
+            overflow: hidden;
+        }
+        #list{
+            list-style: none;
+        }
+        span{
+            margin-right: 10px;
+        }
+        a:hover{
+            color: red;
+            text-decoration: underline;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id="list">
+            <li><span>1.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>2.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>3.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>4.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>5.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>6.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>7.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>8.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>9.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>10.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>11.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>12.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>13.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>14.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>15.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+            <li><span>16.</span><a href="">李嘉诚耗资42亿港元抄底自家长实地产传达何种信息?</a></li>
+        </ul>
+    </div>
+    <script>
+        //无缝滚动注意事项:一定要给父容器添加高度 给父容器设置scrollTop属性
+
+
+        //获取页面中的节点
+        var ul=document.querySelector('ul')
+        var div=document.querySelector('div')
+        //获取ul下面的内容
+        var content=ul.innerHTML;
+        ul.innerHTML=ul.innerHTML+content
+        //启动定时器,重复执行moveUp方法
+        var time=setInterval(moveUp,20)
+
+        //定义方法,功能是使div中的内容可以向上滚动
+        function moveUp(){
+            if(div.scrollTop>ul.offsetHeight*2/3){
+                div.scrollTop=0
+            }else{
+                div.scrollTop=div.scrollTop+1
+            }
+        }
+
+        //设置鼠标移入和移出效果
+        div.onmouseover=function(){
+            clearInterval(time)
+        }
+        div.onmouseout=function(){
+            time=setInterval(moveUp,20)
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //字符串中字符的管理方式类似于数组,每个字符都有自己的下标,下标从0开始到字符串长度-1
+        //字符串一旦创建就不可以再改变了
+        var str='helloword'
+        for(var i=0;i<str.length;i++){
+            console.log(str[i])
+        }
+        for(var i in str){
+            console.log(str[i])
+        }
+        for(var val of str){
+            console.log(val)
+        }
+        
+    </script>
+</body>
+</html>

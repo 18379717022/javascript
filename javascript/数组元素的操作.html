@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数组元素的操作:增 删 改 查
+        //增:为数组增加新的元素,(js中数组的长度是可变的)
+        //删:删除数组中的某个数据,格式:delete 数组名称[下标]
+        //改:更改数组元素的值,格式:数组名称[小标]=新值
+        //查:获取数组元素,格式:数组名称[下标]
+
+        var arr=[1,2,3,4,5,6,7,8,9,10]
+        //增
+        arr[10]=11
+        arr[100]=102
+        console.log(arr)
+
+        //删
+        delete arr[9]
+        console.log(arr)
+        console.log(arr[9])
+
+        //改
+        arr[0]=100;
+        console.log(arr)
+
+        //查
+        console.log(arr[0]+arr[9])
+    </script>
+</body>
+</html>

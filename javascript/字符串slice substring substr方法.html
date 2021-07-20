@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //slice方法:作用是对字符串进行截取,格式:字符串.slice(begin,end)
+        var str='helloworld'
+        var res=str.slice(2,4)
+        console.log(res)//ll
+        var res=str.slice(5)
+        console.log(res)
+
+        //substring方法:按照下标对字符串进行截取,格式:字符串.substring(begin,end)
+        var str2='goodmorning'
+        var res=str2.slice(1,4)
+        console.log(res)//ood
+        var res=str2.slice(2)
+        console.log(res)
+
+        //substr方法:按照个数对字符串进行截取,格式:字符串.substr(begin,count)
+        var str3='goodnoon'
+        var res=str3.substr(2,4)
+        console.log(res)//odno
+    </script>
+</body>
+</html>

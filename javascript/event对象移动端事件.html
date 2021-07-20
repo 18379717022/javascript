@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        /*
+        移动端事件:
+          touchstart事件:当手指触摸到屏幕或者指定元素时触发
+          touchmove事件:当手指在屏幕或指定元素上移动时触发
+          touchend事件:当手指从屏幕或者指定元素上离开时触发
+          touchcancel事件:当系统停止跟踪触摸时触发(如电话接入或者弹出信息,一般在这个操作中来做一些暂停游戏类操作)
+        */
+
+        var div=document.querySelector('div')
+        //手指按到div上时触发
+        div.ontouchstart=function(e){
+            console.log(e.type)
+        }
+        //手指在div上移动时触发
+        div.ontouchmove=function(e){
+            console.log(e.type)
+        }
+        div.ontouchend=function(e){
+            console.log(e.type)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //mousewheel事件:鼠标滚动事件,其事件对象中button属性值为0
+        //wheelDelta属性:表示滚动的方向,值大于0就是上滚,值小于0就是下滚
+        document.onmousewheel=function(e){
+            console.log(e.button)
+        }
+    </script>
+</body>
+</html>

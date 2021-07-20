@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          返回值:所谓返回值就是指函数被调用后,向调用者返回的一个数据,函数内部利用return关键字将返回值返回
+            1.return关键字的使用格式:return 返回值;
+            2.return使用时的注意事项：返回值可以是变量,字面量,表达式
+            3.函数内部可以有多个return,但是只能执行一个(第一个),
+            因为return关键字除了返回数据,还具有结束函数执行的功能。
+            4.如果函数中没有设置return,那么在调用函数时,其实后台会向调用者返回一个值--undefined
+            5.在定义函数时,return和它后面的返回值间不要换行
+            6.如果要将return用作结束函数的功能,那么可以采用return;的格式
+        */
+        function fn(){
+            return 50+10;
+        }
+        var res=fn()
+        console.log(res)
+
+        function fn2(){
+            console.log('fn2执行了')
+        }
+        var res2=fn2()
+        console.log(res2)//undefined
+        
+    </script>
+</body>
+</html>

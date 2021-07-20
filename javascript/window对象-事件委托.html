@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>我是第1个li</li>
+        <li>我是第2个li</li>
+        <li>我是第3个li</li>
+        <li>我是第4个li</li>
+        <li>我是第5个li</li>
+    </ul>
+    <script>
+        /*
+            事件委托:事件委托也被称为事件代理,就是指将事件委托给祖先元素,然后利用事件冒泡机制
+            和事件对象让该祖先元素下面的所有后代元素可以具有同一类型的事件
+        */
+       var ul=document.querySelector('ul')
+       ul.onclick=function(e){
+           console.log(e)
+       }
+       var newLi=document.createElement('li');
+       newLi.innerHTML='我是新的li';
+       ul.appendChild(newLi)
+    </script>
+</body>
+</html>

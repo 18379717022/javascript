@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          match方法:
+          1.作用:从字符串中查找匹配的子串
+          2.格式:字符串.match('要找的子串'/正则表达式)
+        */
+
+        var str='helloworld'
+        var reg=/l/g;//g是正则表达式的一个修饰符,表示全局匹配
+        var res=str.match(reg)
+        console.log(res)
+    </script>
+</body>
+</html>

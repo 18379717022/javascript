@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //try catch：异常捕获机制,格式:try{可能会有问题的代码}catch(error){错误的处理方式}
+        //如果没有try catch,那么当程序中有错误时,程序就会停到错误的位置,不再继续往下执行
+        console.log(1);
+        console.log(2);
+        try{
+            var arr=new Array(-10);
+            console.log(arr);
+        }catch(error){
+            var arr=new Array(10);
+            console.log(arr)
+        }
+        console.log(3)
+    </script>
+</body>
+</html>

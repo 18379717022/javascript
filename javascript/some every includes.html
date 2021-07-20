@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //some方法:用于检测数组元素是否满足指定条件,只要有一个满足就返回true
+        var arr=[1,2,3,4,5]
+        var res=arr.some(item=>{
+            return item>4
+        })
+        console.log('some:'+res)
+        console.log(arr)
+
+        //every方法:用于检测数组元素是否都满足指定条件,都满足才返回true
+        var arr=[1,2,3,4,5]
+        var res=arr.every(item=>{
+            return item>3
+        })
+        console.log('every:'+res)
+
+        //includes方法:用来判断数组中是否包含某个指定的值,如果是则返回true,否则false
+        var arr=[1,2,3,4,5]
+        var res=arr.includes(2,2);
+        console.log('includes:'+res)
+    </script>
+</body>
+</html>

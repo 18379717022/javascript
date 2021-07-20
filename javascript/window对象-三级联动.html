@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <select name="province" id="province"><option value="">请选择</option></select>
+    <span>省</span>
+    <select name="city" id="city"><option value="">请选择</option></select>
+    <span>市</span>
+    <select name="district" id="district"><option value="">请选择</option></select>
+    <span>区</span>
+
+    <script>
+        //定义数据
+        var provinceData=['江西省','福建省','广东省']
+        var cityData=[
+            ['赣州市','吉安','抚州'],
+            ['厦门市'],
+            ['广州市','深圳市']
+        ]
+        var districtData=[
+            [
+                ['赣州一区','赣州二区'],
+                ['吉安一区','吉安二区'],
+                ['抚州一区','抚州二区']
+            ],
+            [
+                ['厦门一区','厦门二区']
+            ],
+            [
+                ['广州一区','广州二区'],
+                ['深圳一区','深圳二区']
+            ]
+        ]
+
+        //获取节点
+        var province=document.getElementById('province')
+        var city=document.getElementById('city')
+        var district=document.getElementById('district')
+
+        //创建省
+        for(var i=0;i<provinceData.length;i++){
+            //创建option
+            var opt=document.createElement('option');
+            //为option添加value属性
+            opt.value=i;
+            //为option添加内容
+            opt.innerHTML=provinceData[i]
+            //将option添加到select中
+            province.appendChild(opt)
+        }
+
+        //显示城市
+        province.onchange=changeCity;
+        //显示区
+        city.onchange=changeQu;
+
+        var provinceValue;
+
+        function changeCity(){
+            //获取省份的value
+            provinceValue=province.value
+
+            //将城市节点中的选项只保留一个
+            city.length=1;
+            for(var i=0;i<cityData[provinceValue].length;i++){
+                //创建option
+                var opt=document.createElement('option');
+                //添加value属性
+                opt.value=i;
+                //添加内容
+                opt.innerHTML=cityData[provinceValue][i];
+                //将option添加到城市节点中
+                city.appendChild(opt)
+
+            }
+        }
+
+        function changeQu(){
+            //获取选择的城市的value
+            var cityValue=city.value;
+            //设置district的length属性
+            district.length=1;
+            for(var i=0;i<districtData[provinceValue][cityValue].length;i++){
+                //创建option
+                var opt=document.createElement('option')
+                //添加value属性
+                opt.value=i;
+                //添加内容
+                opt.innerHTML=districtData[provinceValue][cityValue][i];
+                //将option添加到区节点中
+                district.appendChild(opt)
+            }
+            
+        }
+    </script>
+</body>
+</html>

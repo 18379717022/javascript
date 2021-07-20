@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //求两个日期时间对象相差的差值:直接将两个日期时间对象做差
+        var date1=new Date();
+        var date2=new Date('2000-10-4')
+        var res=Math.abs(date1-date2)//得到的是毫秒
+        console.log(res)
+        console.log(parseInt(res/1000/60/60/24/365))
+
+        //利用getTime方法先获取每个日期时间对象距离1979年1月1日0时0分0秒的毫秒值
+        var date1=new Date();
+        var date2=new Date('2000-10-4')
+        var res=date1.getTime()-date2.getTime()
+        console.log(parseInt(res/1000/60/60/24/365))
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //includes方法:判断字符中是否包含指定的字符,有就返回true,没有就返回false
+        var str='helloworld'
+        var res=str.includes('or')
+        console.log(res)//true
+
+        //startsWith方法:判断字符串是否以某个字符开头,如果是,就返回true,否则返回false
+        var str='abcdef'
+        var res=str.startsWith('ab')
+        console.log(res)//true
+
+        //endsWith方法:判断字符串是否以某个字符结尾,如果是,就返回true,否则返回false
+        var str='helloworld'
+        var res=str.endsWith('ld')
+        console.log(res)//true
+
+        //repeat方法:将字符串按照指定的次数进行重复,格式:字符串.repeat(次数)
+        var str='abc';
+        var res=str.repeat(3)
+        console.log(res)//abcabcabc
+
+        //padStart方法:将字符串扩展到指定的长度,如果长度不够,那么在字符串左侧以指定字符补位
+        //格式:字符串.padStart(长度,'用来补位的字符')
+        var str='abcd'
+        var res=str.padStart(10,'*')
+        console.log(res)//******abcd
+
+        //padEnd方法:将字符串的长度进行扩展,如果长度不够,在字符串末尾用指定字符补位
+        //格式:字符串.padEnd(长度,'指定字符')
+        var str='abcd'
+        var res=str.padEnd(10,'-')
+        console.log(res)//abcd------
+    </script>
+</body>
+</html>

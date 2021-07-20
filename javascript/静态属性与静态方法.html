@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //构造方法中的属性叫私有属性,原型链上的属性叫公有属性
+        //静态属性与静态方法:就是给构造方法直接绑定的属性和方法
+        //静态属性与静态方法只能由构造方法来调,不能由构造方法创建出来的对象来调用
+
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+
+        //静态属性
+        Person.a=100;
+
+        //静态方法
+        Person.fn=function(){
+            console.log('hello')
+        }
+
+        var p=new Person('Tom',10)
+        console.log(p.name)
+        console.log(p.age)
+
+        console.log(p.a)//undefined
+        console.log(p.fn)//undefined
+
+        console.log(Person.a)//100
+        console.log(Person.fn)
+    </script>
+</body>
+</html>

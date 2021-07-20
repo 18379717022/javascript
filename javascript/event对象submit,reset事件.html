@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="ok.html">
+        <span>用户名:</span>
+        <input type="text" name="userName">
+        <button>提交</button>
+        <button type="reset">重置</button>
+    </form>
+    <script>
+        //submit事件:当提交按钮被点击时触发,注意:该事件是给form元素加
+        //reset事件:当重置按钮被点击时触发,注意:该事件也是给form元素加
+        
+        var form=document.querySelector('form')
+        var input=document.querySelector('input')
+        form.onsubmit=function(e){
+            if(input.value!=='廖云福'){
+                return false;//阻止提交行为
+            }
+        }
+        form.onreset=function(e){
+            console.log('重置按钮被点击了')
+        }
+    </script>
+</body>
+</html>

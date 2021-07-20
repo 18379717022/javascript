@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>用户名:</span>
+    <input type="text">
+    <script>
+        var input=document.querySelector('input')
+        input.oninput=function(e){//只要输入框中的内容发生变化就会触发该事件
+            console.log(e.type)
+        }
+        input.onchange=function(e){//输入框中的内容发生变化并且输入框失去焦点就会触发该事件
+            console.log(e.type)
+        }
+        input.onblur=function(e){
+            console.log(e.type)
+        }
+    </script>
+</body>
+</html>

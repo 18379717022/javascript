@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+          构造方法的执行流程:
+            1.第一步：如果有形参,那么先将实参的数据传递给构造方法的形参。并且创建一个空对象,
+            让this指向这个空对象
+            2.第二步:执行构造方法中的语句,为空对象(this)绑定属性并且初始化
+            3.第三步:将创建好的对象返回给外部
+        */
+
+
+        function Person(name,age,gender){
+            this.name=name;
+            this.age=age;
+            this.gender=gender;
+            
+            this.speak=function(){
+                console.log('hello')
+            }
+        }
+        var p1=new Person('Tom',18,'男')
+    </script>
+</body>
+</html>
